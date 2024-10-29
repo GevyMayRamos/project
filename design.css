@@ -1,0 +1,83 @@
+body {
+    position: relative; /* Positioning to contain the pseudo-element */
+    overflow: hidden; /* Prevent overflow if necessary */
+    margin: 0; /* Remove default body margin */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    z-index: -1; /* Place behind the content */
+    opacity: 0.8; /* Adjust the opacity of the background image */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity changes */
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(254, 254, 254, 0.7);
+}
+
+#city, #getWeather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    padding-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(73, 73, 73, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+#weatherResult {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 1px 1px 12px black;
+    display: none;
+}
+
+.container {
+    position: relative;
+}
+.image-container {
+    height: 120px;
+    width: 300px;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+#weatherResult h2 {}
+#weatherResult h3 {}
+#weatherResult p {}
